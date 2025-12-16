@@ -11,6 +11,7 @@ import {
   HttpStatus,
   ValidationPipe,
   Query,
+  ParseArrayPipe,
 } from '@nestjs/common';
 import { BooksService } from './books.service';
 import { CreateBookDto } from './dto/create-book.dto';
@@ -25,8 +26,8 @@ export class BooksController {
 
   @Post()
   @HttpCode(HttpStatus.CREATED)
-  create(@Body(ValidationPipe) createBookDto: CreateBookDto) {
-    return this.booksService.create(createBookDto);
+  create(@Body(new ParseArrayPipe({ items: CreateBookDto })) createBookDtos: CreateBookDto[]) {
+    return this.booksService.create(createBookDtos);
   }
 
   @Get()

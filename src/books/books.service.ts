@@ -33,38 +33,60 @@ export class BooksService {
     private bookGenreRepository: typeof BookGenre,
   ) {}
 
-  async create(createBookDto: CreateBookDto) {
-    const { genre_ids, ...bookData } = createBookDto;
+  async create(createBookDtos: CreateBookDto[]) {
+    if (!this.bookRepository.sequelize) {
+      throw new Error('Database connection is not available');
+    }
+    const transaction = await this.bookRepository.sequelize.transaction();
 
-    const book = await this.bookRepository.create(bookData as any);
+    try {
+      const createdBooks: Book[] = [];
 
-    if (genre_ids && genre_ids.length > 0) {
-      // Verify all genres exist
-      const genres = await this.genreRepository.findAll({
-        where: { genre_id: { [Op.in]: genre_ids } },
-      });
+      for (const createBookDto of createBookDtos) {
+        const { genre_ids, ...bookData } = createBookDto;
 
-      if (genres.length !== genre_ids.length) {
-        throw new NotFoundException(ErrorMessage.GENRE_NOT_FOUND);
+        const book = await this.bookRepository.create(bookData as any, {
+          transaction,
+        });
+
+        if (genre_ids && genre_ids.length > 0) {
+          // Verify all genres exist
+          const genres = await this.genreRepository.findAll({
+            where: { genre_id: { [Op.in]: genre_ids } },
+            transaction,
+          });
+
+          if (genres.length !== genre_ids.length) {
+            throw new NotFoundException(ErrorMessage.GENRE_NOT_FOUND);
+          }
+
+          // Create book-genre associations
+          await this.bookGenreRepository.bulkCreate(
+            genre_ids.map((genre_id) => ({
+              book_id: book.book_id,
+              genre_id,
+            })) as any,
+            { transaction },
+          );
+        }
+        createdBooks.push(book);
       }
 
-      // Create book-genre associations
-      await this.bookGenreRepository.bulkCreate(
-        genre_ids.map((genre_id) => ({
-          book_id: book.book_id,
-          genre_id,
-        })) as any,
-      );
+      await transaction.commit();
+
+      const booksWithGenres = await this.bookRepository.findAll({
+        where: { book_id: { [Op.in]: createdBooks.map((b) => b.book_id) } },
+        include: [{ model: Genre, through: { attributes: [] } }],
+      });
+
+      return {
+        message: ResponseMessage.BOOKS_CREATED,
+        books: booksWithGenres,
+      };
+    } catch (error) {
+      await transaction.rollback();
+      throw error;
     }
-
-    const bookWithGenres = await this.bookRepository.findByPk(book.book_id, {
-      include: [{ model: Genre, through: { attributes: [] } }],
-    });
-
-    return {
-      message: ResponseMessage.BOOK_CREATED,
-      book: bookWithGenres,
-    };
   }
 
   async findAll(filterDto: BookFilterDto) {

@@ -42,6 +42,7 @@ export enum ResponseMessage {
   BOOK_UPDATED = 'Book updated successfully',
   BOOK_DELETED = 'Book deleted successfully',
   BOOK_RETRIEVED = 'Book retrieved successfully',
+  BOOKS_CREATED = 'Books created successfully', // Added for bulk creation
   BOOKS_RETRIEVED = 'Books retrieved successfully',
   
   // Genres

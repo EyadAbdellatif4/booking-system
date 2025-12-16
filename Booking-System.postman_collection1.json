@@ -105,7 +105,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Atomic Habits\",\r\n    \"author\": \"eyad\",\r\n    \"description\": \"break the big things to a small one\",\r\n    \"cover_image_url\": \"https://example.com/great-gatsby.jpg\",\r\n    \"publication_year\": 1949,\r\n    \"genre_ids\": [3,2]\r\n\r\n}",
+							"raw": "[\r\n  {\r\n    \"title\": \"The Hobbit\",\r\n    \"author\": \"J.R.R. Tolkien\",\r\n    \"description\": \"A fantasy novel about the journey of Bilbo Baggins.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg\",\r\n    \"publication_year\": 1937,\r\n    \"genre_ids\": [2, 4]\r\n  },\r\n  {\r\n    \"title\": \"Harry Potter and the Sorcerer's Stone\",\r\n    \"author\": \"J.K. Rowling\",\r\n    \"description\": \"A young boy discovers he is a wizard and attends Hogwarts School.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780590353427-L.jpg\",\r\n    \"publication_year\": 1997,\r\n    \"genre_ids\": [2, 1]\r\n  },\r\n  {\r\n    \"title\": \"A Game of Thrones\",\r\n    \"author\": \"George R.R. Martin\",\r\n    \"description\": \"Noble families vie for control of the Iron Throne.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780553593716-L.jpg\",\r\n    \"publication_year\": 1996,\r\n    \"genre_ids\": [2, 1]\r\n  },\r\n  {\r\n    \"title\": \"The Catcher in the Rye\",\r\n    \"author\": \"J.D. Salinger\",\r\n    \"description\": \"A story about teenage alienation and rebellion.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780316769488-L.jpg\",\r\n    \"publication_year\": 1951,\r\n    \"genre_ids\": [1, 4]\r\n  },\r\n  {\r\n    \"title\": \"To Kill a Mockingbird\",\r\n    \"author\": \"Harper Lee\",\r\n    \"description\": \"A novel about racial injustice in the Deep South.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg\",\r\n    \"publication_year\": 1960,\r\n    \"genre_ids\": [1, 4]\r\n  },\r\n  {\r\n    \"title\": \"Pride and Prejudice\",\r\n    \"author\": \"Jane Austen\",\r\n    \"description\": \"A romantic novel about manners and marriage.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg\",\r\n    \"publication_year\": 1813,\r\n    \"genre_ids\": [6, 4]\r\n  },\r\n  {\r\n    \"title\": \"The Great Gatsby\",\r\n    \"author\": \"F. Scott Fitzgerald\",\r\n    \"description\": \"A critique of the American Dream in the Jazz Age.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg\",\r\n    \"publication_year\": 1925,\r\n    \"genre_ids\": [1, 4]\r\n  },\r\n  {\r\n    \"title\": \"Brave New World\",\r\n    \"author\": \"Aldous Huxley\",\r\n    \"description\": \"A dystopian novel about a technologically controlled society.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780060850524-L.jpg\",\r\n    \"publication_year\": 1932,\r\n    \"genre_ids\": [3, 4]\r\n  },\r\n  {\r\n    \"title\": \"Fahrenheit 451\",\r\n    \"author\": \"Ray Bradbury\",\r\n    \"description\": \"A dystopian future where books are outlawed.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9781451673319-L.jpg\",\r\n    \"publication_year\": 1953,\r\n    \"genre_ids\": [3, 4]\r\n  },\r\n  {\r\n    \"title\": \"The Da Vinci Code\",\r\n    \"author\": \"Dan Brown\",\r\n    \"description\": \"A mystery thriller involving secret societies.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780307474278-L.jpg\",\r\n    \"publication_year\": 2003,\r\n    \"genre_ids\": [5, 1]\r\n  },\r\n\r\n  {\r\n    \"title\": \"The Alchemist\",\r\n    \"author\": \"Paulo Coelho\",\r\n    \"description\": \"A philosophical novel about following one's dreams.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780061122415-L.jpg\",\r\n    \"publication_year\": 1988,\r\n    \"genre_ids\": [1, 4]\r\n  },\r\n  {\r\n    \"title\": \"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe\",\r\n    \"author\": \"C.S. Lewis\",\r\n    \"description\": \"Children discover a magical world through a wardrobe.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780064471046-L.jpg\",\r\n    \"publication_year\": 1950,\r\n    \"genre_ids\": [2, 4]\r\n  },\r\n  {\r\n    \"title\": \"The Girl with the Dragon Tattoo\",\r\n    \"author\": \"Stieg Larsson\",\r\n    \"description\": \"A mystery involving murder and corruption.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780307454546-L.jpg\",\r\n    \"publication_year\": 2005,\r\n    \"genre_ids\": [5]\r\n  },\r\n  {\r\n    \"title\": \"The Hunger Games\",\r\n    \"author\": \"Suzanne Collins\",\r\n    \"description\": \"A dystopian competition in a totalitarian society.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780439023528-L.jpg\",\r\n    \"publication_year\": 2008,\r\n    \"genre_ids\": [3, 1]\r\n  },\r\n  {\r\n    \"title\": \"The Book Thief\",\r\n    \"author\": \"Markus Zusak\",\r\n    \"description\": \"A story of a girl in Nazi Germany narrated by Death.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780375842207-L.jpg\",\r\n    \"publication_year\": 2005,\r\n    \"genre_ids\": [1, 4]\r\n  },\r\n\r\n  {\r\n    \"title\": \"Moby-Dick\",\r\n    \"author\": \"Herman Melville\",\r\n    \"description\": \"A sea captain's obsession with a giant white whale.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780142437247-L.jpg\",\r\n    \"publication_year\": 1851,\r\n    \"genre_ids\": [4]\r\n  },\r\n  {\r\n    \"title\": \"Dracula\",\r\n    \"author\": \"Bram Stoker\",\r\n    \"description\": \"A gothic horror novel introducing Count Dracula.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780141439846-L.jpg\",\r\n    \"publication_year\": 1897,\r\n    \"genre_ids\": [4, 1]\r\n  },\r\n  {\r\n    \"title\": \"The Shining\",\r\n    \"author\": \"Stephen King\",\r\n    \"description\": \"A horror novel set in an isolated hotel.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780307743657-L.jpg\",\r\n    \"publication_year\": 1977,\r\n    \"genre_ids\": [1]\r\n  },\r\n  {\r\n    \"title\": \"The Road\",\r\n    \"author\": \"Cormac McCarthy\",\r\n    \"description\": \"A father and son survive in a post-apocalyptic world.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780307387899-L.jpg\",\r\n    \"publication_year\": 2006,\r\n    \"genre_ids\": [3]\r\n  },\r\n  {\r\n    \"title\": \"Life of Pi\",\r\n    \"author\": \"Yann Martel\",\r\n    \"description\": \"A boy survives a shipwreck with a Bengal tiger.\",\r\n    \"cover_image_url\": \"https://covers.openlibrary.org/b/isbn/9780156027328-L.jpg\",\r\n    \"publication_year\": 2001,\r\n    \"genre_ids\": [1]\r\n  }\r\n]\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -148,7 +148,7 @@
 							"raw": "{\r\n    \"title\": \"Atomic Habits\",\r\n    \"author\": \"eyad\",\r\n    \"description\": \"break the big things to a small one\",\r\n    \"cover_image_url\": \"https://example.com/great-gatsby.jpg\",\r\n    \"publication_year\": 1949,\r\n    \"genre_ids\": [3,2]\r\n\r\n}"
 						},
 						"url": {
-							"raw": "{{Url}}/books/?search=The Great Gatsby",
+							"raw": "{{Url}}/books/?genre=Drama",
 							"host": [
 								"{{Url}}"
 							],
@@ -159,12 +159,12 @@
 							"query": [
 								{
 									"key": "search",
-									"value": "The Great Gatsby"
+									"value": "The Great Gatsby",
+									"disabled": true
 								},
 								{
 									"key": "genre",
-									"value": "Science Fiction",
-									"disabled": true
+									"value": "Drama"
 								}
 							]
 						}
@@ -375,13 +375,13 @@
 							"raw": "{\r\n   \"name\": \"musical\"\r\n}"
 						},
 						"url": {
-							"raw": "{{Url}}/genres/2",
+							"raw": "{{Url}}/genres/",
 							"host": [
 								"{{Url}}"
 							],
 							"path": [
 								"genres",
-								"2"
+								""
 							]
 						}
 					},
